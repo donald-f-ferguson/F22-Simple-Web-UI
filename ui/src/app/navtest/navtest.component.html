@@ -1,0 +1,23 @@
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+  <li [ngbNavItem]=1>
+    <a ngbNavLink>Snuffleupagus</a>
+    <ng-template ngbNavContent>
+      <app-snuffle></app-snuffle>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="2">
+    <a ngbNavLink>IMDB</a>
+    <ng-template ngbNavContent>
+      <app-imdb-all></app-imdb-all>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="3">
+    <a ngbNavLink>Lahman's Baseball</a>
+    <ng-template ngbNavContent>
+      <app-player-component></app-player-component>
+    </ng-template>
+  </li>
+</ul>
+
+<div [ngbNavOutlet]="nav" class="mt-2"></div>
+
