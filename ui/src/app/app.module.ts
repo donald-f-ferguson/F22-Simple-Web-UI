@@ -6,15 +6,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
-import { ImdbartistComponent } from './imdbartist/imdbartist.component';
+import { ColumbiaStudentComponent } from './columbia_student/columbia-student.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import {PlayerComponent} from './player/player.component';
 import { SnuffleComponent } from './snuffle/snuffle.component';
-import { ConnieComponent } from './connie/connie.component';
 import { NavtestComponent } from './navtest/navtest.component';
 import {NgbNavModule} from "@ng-bootstrap/ng-bootstrap";
-import { ImdbAllComponent } from './imdb-all/imdb-all.component';
+import { ColumbiaAllComponent } from './columbia-all/columbia-all.component'
 import { ImdbTitleComponent } from './imdb-title/imdb-title.component';
 
 
@@ -22,12 +21,11 @@ import { ImdbTitleComponent } from './imdb-title/imdb-title.component';
   declarations: [
     AppComponent,
     NavbarComponent,
-    ImdbartistComponent,
+    ColumbiaStudentComponent,
     PlayerComponent,
     SnuffleComponent,
-    ConnieComponent,
     NavtestComponent,
-    ImdbAllComponent,
+    ColumbiaAllComponent,
     ImdbTitleComponent
   ],
     imports: [

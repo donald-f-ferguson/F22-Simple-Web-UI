@@ -5,7 +5,7 @@
         <div class="card-header">
           <div class="row">
             <div class="col">
-              <h3>IMDB Artist Information</h3>
+              <h3>Columbia Student Information</h3>
             </div>
             <div class="col">
               <button class="btn btn-link collapsed float-end" data-toggle="collapse" data-target="#collapse-L1"
@@ -15,10 +15,10 @@
             </div>
           </div>
         </div>
-        <div class="card-body" *ngIf="toggleImdbArtist">Some information about
-          <a href="https://www.imdb.com/interfaces/">IMDB</a> artists will go here!
-            <label>Type in an artist's nconst: </label><input type="text" class="form-control"
-                                                    [(ngModel)]="artistNconst">
+        <div class="card-body" *ngIf="toggleStudent">Some information about
+          Columbia artists will go here!
+            <label>Type in an student's UNI: </label><input type="text" class="form-control"
+                                                    [(ngModel)]="studentUni">
           <p></p>
             <button type="button" (click)="onLookup()" class="btn btn-primary">Search</button>
           <!-- You typed: <span *ngIf="artistName"> "{{ artistName }}" </span> -->
@@ -26,22 +26,20 @@
           <table class="table table-striped">
             <thead>
             <tr>
-              <th scope="col">Primary Name</th>
-              <th scope="col">Birth Year</th>
-              <th scope="col">Death Year</th>
-              <th scope="col">Primary Professions</th>
-              <th scope="col">Known For Titles</th>
+              <th scope="col">UNI</th>
+              <th scope="col">Last name</th>
+              <th scope="col">First name</th>
+              <th scope="col">Email</th>
             </tr>
             </thead>
             <tbody>
-            <tr *ngFor="let p of artistInfo; index as i">
+            <tr *ngFor="let p of studentsInfo; index as i">
               <td>
-                {{ p.primaryName }}
+                {{ p.uni }}
               </td>
-              <td>{{p.birth_year }}</td>
-              <td>{{ p.death_year }}</td>
-              <td>{{ p.primaryProfession }}</td>
-              <td>{{ p.knownForTitles }}</td>
+              <td>{{p.last_name }}</td>
+              <td>{{ p.first_name }}</td>
+              <td>{{ p.email }}</td>
             </tr>
             </tbody>
           </table>

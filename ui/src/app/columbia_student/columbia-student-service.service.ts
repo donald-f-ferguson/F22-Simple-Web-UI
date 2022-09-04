@@ -1,24 +1,24 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { ImdbArtist } from './imdbartist';
-import { ImdbArtistRsp } from "./imdbartist";
+import { ColumbiaStudent } from './columbia-student';
+import { ColumbiaStudentRsp } from "./columbia-student";
 import { Observable } from 'rxjs';
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class ImdbServiceService {
+export class ColumbiaStudentServiceService {
 
-  imdbArtists: ImdbArtist[];
-  imdbUrl: string;
+  students: ColumbiaStudent[];
+  studentServiceUrl: string;
 
   constructor(private http: HttpClient) {
     // console.log('The URL = ' + window.location.href);
-    this.imdbArtists = undefined;
+    this.students = undefined;
   }
 
-  getImdbServiceUrl(): string {
+  getStudentServiceUrl(): string {
     const theUrl = window.location.href;
     let result: string;
 
@@ -26,20 +26,20 @@ export class ImdbServiceService {
     // If you do this on a job interview, you did not learn this in my class.
     if (theUrl.includes('amazonaws')) {
       /* This can change over time */
-      result = 'ec2-54-242-71-165.compute-1.amazonaws.com:5000/imdb/artists?primaryName=';
+      result = undefined;
     }
     else {
-      result = 'http://127.0.0.1:5001/api/artists/';
+      result = 'http://127.0.0.1:5001/api/students/';
     }
     return result;
   }
 
 
   /** GET heroes from the server */
-  getArtists(artistNconst): Observable<ImdbArtist> {
+  getStudents(studentUni): Observable<ColumbiaStudent> {
     let theUrl: string;
 
-    theUrl = this.getImdbServiceUrl() + artistNconst;
-    return this.http.get<ImdbArtist>(theUrl);
+    theUrl = this.getStudentServiceUrl() + studentUni;
+    return this.http.get<ColumbiaStudent>(theUrl);
   }
 }

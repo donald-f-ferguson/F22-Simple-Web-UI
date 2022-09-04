@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ImdbAllComponent } from './imdb-all.component';
+import { ColumbiaAllComponent } from './columbia-all.component';
 
 describe('ImdbAllComponent', () => {
-  let component: ImdbAllComponent;
-  let fixture: ComponentFixture<ImdbAllComponent>;
+  let component: ColumbiaAllComponent;
+  let fixture: ComponentFixture<ColumbiaAllComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ImdbAllComponent ]
+      declarations: [ ColumbiaAllComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ImdbAllComponent);
+    fixture = TestBed.createComponent(ColumbiaAllComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
