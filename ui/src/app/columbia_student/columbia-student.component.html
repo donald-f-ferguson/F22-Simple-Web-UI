@@ -26,20 +26,24 @@
           <table class="table table-striped">
             <thead>
             <tr>
-              <th scope="col">UNI</th>
+              <th scope="col">Student ID</th>
               <th scope="col">Last name</th>
               <th scope="col">First name</th>
+              <th scope="col">Middle name</th>
               <th scope="col">Email</th>
+              <th scope="col">School code</th>
             </tr>
             </thead>
             <tbody>
             <tr *ngFor="let p of studentsInfo; index as i">
               <td>
-                {{ p.uni }}
+                {{ p.guid }}
               </td>
               <td>{{p.last_name }}</td>
               <td>{{ p.first_name }}</td>
+              <td>{{p.middle_name }}</td>
               <td>{{ p.email }}</td>
+              <td>{{p.school_code }}</td>
             </tr>
             </tbody>
           </table>
